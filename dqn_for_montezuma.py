@@ -152,7 +152,6 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device(
 env_name = 'MontezumaRevengeNoFrameskip-v4'
 # env_name = 'ALE/MontezumaRevenge-v5'
 env = gym.make(env_name)
-# env = Env_wrapper(env)
 env = AtariPreprocessing(env)
 env = Env_wrapper(env)
 random.seed(0)
