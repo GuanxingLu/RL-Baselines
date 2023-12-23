@@ -19,7 +19,9 @@ pip install gym[atari] -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install autorom[accept-rom-license] -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-If you have any question, please feel free to contact: ``lgx23 at mails dot tsinghua dot edu dot cn``
+If you have any question, please feel free to pose an issue or contact: ``lgx23 at mails dot tsinghua dot edu dot cn``
+
+We welcome contributions to this repository. Please submit a pull request if you want to contribute!
 
 ## References
 https://hrl.boyuai.com/
