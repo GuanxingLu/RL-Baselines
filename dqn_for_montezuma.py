@@ -7,6 +7,7 @@ from tqdm import tqdm
 import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
+import cv2
 
 class ReplayBuffer:
     ''' 经验回放池 '''
@@ -126,13 +127,9 @@ class Env_wrapper(gym.Wrapper):
             done = True
 
         return next_state, reward, done, info
-    
-    def render(self, mode='human'):
-        self.env.render(mode)
 
     def reset(self):
-        state = self.env.reset()
-        state = state[0]
+        state, info = self.env.reset()
         self.steps_in_one_episode = 0
         return state
 
@@ -169,6 +166,7 @@ agent = DQN(state_dim, hidden_dim, action_dim, lr, gamma, epsilon,
             target_update, device)
 
 return_list = []
+render = True
 for i in range(10):
     with tqdm(total=int(num_episodes / 10), desc='Iteration %d' % i) as pbar:
         for i_episode in range(int(num_episodes / 10)):
@@ -177,6 +175,11 @@ for i in range(10):
             done = False
             while not done:
                 action = agent.take_action(state)
+
+                if render:
+                    cv2.imshow('state', state)
+                    cv2.waitKey(1)
+
                 next_state, reward, done, _ = env.step(action)
                 replay_buffer.add(state, action, reward, next_state, done)
                 state = next_state

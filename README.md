@@ -15,6 +15,7 @@ pip install gym==0.18.3 tqdm matplotlib numpy -i https://pypi.tuna.tsinghua.edu.
 To run Montezuma's Revenge, please install:
 
 ```
+pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install gym[atari] -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install autorom[accept-rom-license] -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -22,6 +23,14 @@ pip install autorom[accept-rom-license] -i https://pypi.tuna.tsinghua.edu.cn/sim
 If you have any question, please feel free to pose an issue or contact: ``lgx23 at mails dot tsinghua dot edu dot cn``
 
 We welcome contributions to this repository. Please submit a pull request if you want to contribute!
+
+## Usage
+
+To run Montezuma's Revenge:
+
+```
+python dqn_for_montezuma.py
+```
 
 ## References
 https://hrl.boyuai.com/
