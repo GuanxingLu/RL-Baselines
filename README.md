@@ -32,6 +32,11 @@ To run Montezuma's Revenge:
 python dqn_for_montezuma.py
 ```
 
+## Note
+
+- ``dqn_for_montezuma.py`` is implemented upon gym==0.26.2. Please consider revising the code if you are using older versions of gym.
+- ``dqn_for_montezuma.py`` only acts as a very simple baseline!
+
 ## References
 https://hrl.boyuai.com/
 
