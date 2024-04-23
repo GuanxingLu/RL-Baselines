@@ -1,4 +1,4 @@
-# RL-code-2
+# RL-Baselines
 
 ## Requirements
 
