@@ -1,6 +1,3 @@
-'''
-NOTE: This script only support gym 0.26.2
-'''
 import gym
 import readchar
 import numpy as np
@@ -30,6 +27,8 @@ def main(n_trajectories):
     
     print(info)
     env = gym.make(env_name, render_mode='human')
+    # env = gym.make(env_name)
+    # env.seed(0)
     trajectories = []
 
     total_reward=0
@@ -48,10 +47,11 @@ def main(n_trajectories):
                 break 
 
             action = arrow_keys[key]
+            # state, reward, done, info = env.step(action)
             state, reward, done, trunc, info = env.step(action)
             episode_reward += reward
 
-            if done or trunc:
+            if done:
                 print('done or truncated')
                 break
 
