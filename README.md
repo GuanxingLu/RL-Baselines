@@ -26,10 +26,6 @@ To run RL5, please install:
 pip install gym==0.26.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-If you have any question, please feel free to pose an issue or contact: ``lgx23 at mails dot tsinghua dot edu dot cn``
-
-We welcome contributions to this repository. Please submit a pull request if you want to contribute!
-
 ## Usage
 
 To run Montezuma's Revenge:
@@ -43,7 +39,19 @@ python dqn_for_montezuma.py
 - ``dqn_for_montezuma.py`` is implemented upon gym==0.26.2. Please consider revising the code if you are using older versions of gym.
 - ``dqn_for_montezuma.py`` only acts as a very simple baseline!
 
+## Error Catch
+
+- libGL error:
+```
+conda install -c conda-forge gcc
+```
+
+If you have any question, please feel free to pose an issue or contact: ``lgx23 at mails dot tsinghua dot edu dot cn``
+
+We welcome contributions to this repository. Please submit a pull request if you want to contribute!
+
 ## References
+
 https://hrl.boyuai.com/
 
 https://github.com/boyu-ai/Hands-on-RL
