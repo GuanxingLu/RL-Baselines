@@ -9,7 +9,8 @@ conda activate py38
 
 conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.3 -c pytorch
 
-pip install gym==0.18.3 tqdm matplotlib numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install wheel==0.38.0   # [Optional]
+pip install gym==0.21.0 tqdm matplotlib numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 To run Montezuma's Revenge, please install:
